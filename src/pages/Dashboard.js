@@ -38,8 +38,7 @@ const Dashboard = () => {
             });
             localStorage.removeItem("data");
             setTimeout(() => {
-              window.location.href =
-                "https://authapifrontend.onrender.com/login";
+              window.location.href = "/login";
             }, 3500);
           } else {
             toast.error(res.data.msg, {
@@ -64,7 +63,7 @@ const Dashboard = () => {
   // Logout-------------------------------------
   const logout = () => {
     localStorage.removeItem("data");
-    navigate("https://authapifrontend.onrender.com/login");
+    navigate("/login");
   };
   // ---------Data auth Token load on startup
   const loadData = async () => {
@@ -81,7 +80,7 @@ const Dashboard = () => {
       if (res.data.success) {
         setName(res.data.data);
       } else {
-        navigate("https://authapifrontend.onrender.com/login");
+        navigate("/login");
       }
     } catch (error) {
       console.log(error);
