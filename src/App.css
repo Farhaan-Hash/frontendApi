@@ -1,0 +1,32 @@
+html,
+body {
+  height: max-content;
+}
+body {
+  overflow-x: hidden;
+}
+.submit-btn {
+  border: 0;
+  background-color: rgb(15, 90, 109);
+  padding: 10px 60px;
+  color: aliceblue;
+  border-radius: 5px;
+}
+.bgcolor {
+  /* background-color: rgb(15, 90, 109);
+  height: 100%; */
+  background-color: rgba(15, 90, 109, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.customBackground {
+  background-color: rgba(15, 90, 109, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
