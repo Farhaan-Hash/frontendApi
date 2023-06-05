@@ -38,7 +38,7 @@ const Dashboard = () => {
             });
             localStorage.removeItem("data");
             setTimeout(() => {
-              window.location.href = "/login";
+              window.location.href = "/";
             }, 3500);
           } else {
             toast.error(res.data.msg, {
@@ -63,7 +63,7 @@ const Dashboard = () => {
   // Logout-------------------------------------
   const logout = () => {
     localStorage.removeItem("data");
-    navigate("/login");
+    navigate("/");
   };
   // ---------Data auth Token load on startup
   const loadData = async () => {
