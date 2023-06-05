@@ -38,7 +38,8 @@ const Dashboard = () => {
             });
             localStorage.removeItem("data");
             setTimeout(() => {
-              window.location.href = "/";
+              window.location.href =
+                "https://authapifrontend.onrender.com/login";
             }, 3500);
           } else {
             toast.error(res.data.msg, {
@@ -63,21 +64,24 @@ const Dashboard = () => {
   // Logout-------------------------------------
   const logout = () => {
     localStorage.removeItem("data");
-    navigate("https://authapi-mb84.onrender.com/login");
+    navigate("https://authapifrontend.onrender.com/login");
   };
   // ---------Data auth Token load on startup
   const loadData = async () => {
     try {
       const token = await JSON.parse(localStorage.getItem("data"));
-      const res = await axios.get("/auth/userdata", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const res = await axios.get(
+        "https://authapi-mb84.onrender.com/auth/userdata",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       if (res.data.success) {
         setName(res.data.data);
       } else {
-        navigate("https://authapi-mb84.onrender.com/login");
+        navigate("https://authapifrontend.onrender.com/login");
       }
     } catch (error) {
       console.log(error);

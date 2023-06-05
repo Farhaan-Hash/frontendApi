@@ -35,7 +35,7 @@ const Login = () => {
             // save jwt token
 
             localStorage.setItem("data", JSON.stringify(log.data.token));
-            navigate("/dashboard");
+            navigate("https://authapifrontend.onrender.com/dashboard");
           } else {
             toast.error(log.data.msg, {
               position: "top-right",
