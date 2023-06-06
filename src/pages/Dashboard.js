@@ -27,7 +27,7 @@ const Dashboard = () => {
         cupassword: data.cupassword, //whether current password matches with the current password in the database or not
       };
       axios
-        .post("https://authapi-mb84.onrender.com/auth/update", {updateUser})
+        .post("https://backend-api-seven.vercel.app/auth/update", {updateUser})
         .then((res) => {
           if (res.data.success) {
             toast.success(res.data.msg, {
@@ -70,7 +70,7 @@ const Dashboard = () => {
     try {
       const token = await JSON.parse(localStorage.getItem("data"));
       const res = await axios.get(
-        "https://authapi-mb84.onrender.com/auth/userdata",
+        "https://backend-api-seven.vercel.app/auth/userdata",
         {
           headers: {
             Authorization: `Bearer ${token}`,

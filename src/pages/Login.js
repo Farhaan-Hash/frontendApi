@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       axios
-        .post("https://authapi-mb84.onrender.com/auth/login", userData)
+        .post("https://backend-api-seven.vercel.app/auth/login", userData)
         .then((log) => {
           if (log.data.success) {
             toast.success(log.data.msg, {
