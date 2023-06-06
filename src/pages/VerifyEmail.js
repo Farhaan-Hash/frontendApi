@@ -12,7 +12,7 @@ const VerifyEmail = () => {
   const tokenVerify = async () => {
     try {
       const res = await axios.post(
-        "https://backend-api-seven.vercel.app/auth/verify-mail",
+        "https://backauth.onrender.com/auth/verify-mail",
         {
           token: params.token,
         }
