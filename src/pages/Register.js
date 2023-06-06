@@ -26,7 +26,7 @@ const Register = () => {
 
       // console.log(userData);
       await axios
-        .post("https://backend-api-seven.vercel.app/auth/register", userData)
+        .post("https://backauth.onrender.com/auth/register", userData)
         .then((log) => {
           log.data.success
             ? toast.success(log.data.msg, {
