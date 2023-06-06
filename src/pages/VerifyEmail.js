@@ -13,9 +13,11 @@ const VerifyEmail = () => {
     try {
       const res = await axios.post(
         "https://backend-api-seven.vercel.app/auth/verify-mail",
-        {token: params.token}
+        {
+          token: params.token,
+        }
       );
-      // console.log(res.data);
+      console.log(res.data);
       if (res.data.success) {
         toast.success(res.data.msg, {
           position: "top-right",
@@ -43,7 +45,7 @@ const VerifyEmail = () => {
         });
         setTimeout(() => {
           window.close();
-        }, 10000);
+        }, 100000);
       }
     } catch (error) {
       console.log(error);
